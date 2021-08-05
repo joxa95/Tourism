@@ -1,0 +1,31 @@
+.nav {
+  padding: 0 2rem;
+  width: 100%;
+  height: 4rem;
+  padding: 0 2rem;
+  background-color: rgba($background, 0.95);
+
+  &__list {
+    height: 100%;
+    display: flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__item {
+  }
+  &__link {
+    font-size: var(--font-size);
+    color: var(--color-primary);
+  }
+  // future drower
+  &__right-list {
+  }
+  &__right-link {
+    &:not(:last-of-type) {
+      margin-right: 1.5rem;
+    }
+    font-size: var(--font-size);
+    color: var(--color-primary);
+  }
+}
