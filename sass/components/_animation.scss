@@ -1,0 +1,11 @@
+.animatebtn {
+  transition: all $animation-timing ease;
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 10px rgba($background, 0.6);
+  }
+  &:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: none;
+  }
+}

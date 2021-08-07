@@ -1,0 +1,29 @@
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.mb-sm {
+  margin-bottom: 1rem;
+}
+.mb-md {
+  margin-bottom: 2.5rem;
+}
+.mt-sm {
+  margin-top: 1rem;
+}
+.mt-md {
+  margin-top: 2.5rem;
+}
+
+.btn {
+  font-size: 1.6rem;
+  padding: 1rem 2.5rem;
+  border: none;
+  outline: none;
+  border-radius: $border;
+  background-color: var(--color-tertiary);
+  color: var(--color-primary);
+  cursor: pointer;
+}

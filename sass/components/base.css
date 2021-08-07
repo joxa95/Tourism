@@ -3,7 +3,7 @@
   --font-size: 16px;
   --color-primary: #f6f7fb;
   --color-secondary: #111;
-  --color--tertiary: #fdc500;
+  --color-tertiary: #fdc500;
 }
 
 *,
@@ -32,21 +32,51 @@ a {
   cursor: pointer;
 }
 
-.header {
-  width: 100%;
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(0, 176, 155, 0.75), rgba(150, 201, 61, 0.88)), url(../../images/uzbekistan-travel.jpg);
-  background-size: cover;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+.upp {
+  text-transform: uppercase;
 }
 
+.heading-primary {
+  color: white;
+  font-size: 4rem;
+  -webkit-animation: animatedtext 1000ms ease 0.5s;
+          animation: animatedtext 1000ms ease 0.5s;
+}
+
+.animatetext {
+  -webkit-animation: animatedtext 1000ms infinite ease-in;
+          animation: animatedtext 1000ms infinite ease-in;
+}
+
+@-webkit-keyframes animatedtext {
+  0% {
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: rotate(470deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes animatedtext {
+  0% {
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: rotate(470deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
 .nav {
   padding: 0 2rem;
   width: 100%;
   height: 4rem;
   padding: 0 2rem;
-  background-color: rgba(17, 17, 17, 0.95);
+  background: transparent;
 }
 .nav__list {
   height: 100%;
@@ -54,6 +84,9 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.nav .logo a {
+  color: var(--color-tertiary) !important;
 }
 .nav__link {
   font-size: var(--font-size);
@@ -65,4 +98,63 @@ a {
 }
 .nav__right-link:not(:last-of-type) {
   margin-right: 1.5rem;
+}
+
+.header {
+  width: 100%;
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(0, 176, 155, 0.6), rgba(150, 201, 61, 0.7)), url(../../images/uzbekistan-travel.jpg);
+  background-size: cover;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+  position: relative;
+}
+.header__content {
+  text-align: center;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mb-sm {
+  margin-bottom: 1rem;
+}
+
+.mb-md {
+  margin-bottom: 2.5rem;
+}
+
+.mt-sm {
+  margin-top: 1rem;
+}
+
+.mt-md {
+  margin-top: 2.5rem;
+}
+
+.btn {
+  font-size: 1.6rem;
+  padding: 1rem 2.5rem;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  background-color: var(--color-tertiary);
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.animatebtn {
+  transition: all 300ms ease;
+}
+.animatebtn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(17, 17, 17, 0.6);
+}
+.animatebtn:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: none;
 }/*# sourceMappingURL=base.css.map */
